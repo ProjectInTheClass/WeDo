@@ -32,7 +32,7 @@ class CustomTableViewCell: UITableViewCell {
 class MemberViewController: UITableViewController {
     
     var members: [Member] = [
-        Member(name: "김토니", image: "dog", email: "vkennerley0@howstuffworks.com    ", contact: "010-1234-5678", profileMessage: "안녕하세요"),
+        Member(name: "김토니", image: "dog", email: "vkennerley0@howstuffworks.com", contact: "010-1234-5678", profileMessage: "안녕하세요"),
         Member(name: "김춘삼", image: "cat", email: "rhanratty1@sina.com", contact: "010-4543-4343", profileMessage: "안녕하세요2"),
         Member(name: "김춘식", image: "raccoon", email: "kbeere2@wp.com", contact: "010-3322-3322", profileMessage: "안냥"),
         Member(name: "박삼식", image: "goat", email: "jshoppee3@blogspot.com", contact: "010-3303-3303", profileMessage: "안녕하세요3"),

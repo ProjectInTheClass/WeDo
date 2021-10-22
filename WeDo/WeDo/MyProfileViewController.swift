@@ -32,15 +32,11 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var profileEmailLabel: UILabel!
     @IBOutlet weak var profileContactLabel: UILabel!
     @IBOutlet weak var profileMessageLabel: UILabel!
-    
-    
-    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         
         profileImageView.image = myImage
         profileNameLabel.text = myName
