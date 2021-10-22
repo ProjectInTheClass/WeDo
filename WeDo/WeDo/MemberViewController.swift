@@ -22,7 +22,7 @@ class CustomTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.imageView?.frame = CGRect(x: 10,y: 0,width: 40,height: 40)
-        self.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+//        self.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         self.textLabel?.frame = CGRect(x: 60, y: 10, width: self.frame.width - 45, height: 20)
     }
 }
