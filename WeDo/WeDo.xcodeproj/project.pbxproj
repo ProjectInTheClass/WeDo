@@ -13,6 +13,9 @@
 		1EEC3A51271F215B0075EB5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC3A4F271F215B0075EB5A /* Main.storyboard */; };
 		1EEC3A53271F215E0075EB5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC3A52271F215E0075EB5A /* Assets.xcassets */; };
 		1EEC3A56271F215E0075EB5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC3A54271F215E0075EB5A /* LaunchScreen.storyboard */; };
+		A52B48902723FD5500CDE624 /* MemberStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52B488F2723FD5500CDE624 /* MemberStoryboard.storyboard */; };
+		A52B48922723FDAC00CDE624 /* ChattingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52B48912723FDAC00CDE624 /* ChattingStoryboard.storyboard */; };
+		A52B48942723FDEE00CDE624 /* ProjectStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52B48932723FDEE00CDE624 /* ProjectStoryboard.storyboard */; };
 		E2288D712721A2CD006079C4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D702721A2CD006079C4 /* Member.swift */; };
 		E2288D732721A30F006079C4 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D722721A30F006079C4 /* MemberViewController.swift */; };
 		E2288D752721A699006079C4 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D742721A699006079C4 /* MyProfileViewController.swift */; };
@@ -27,6 +30,9 @@
 		1EEC3A52271F215E0075EB5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EEC3A55271F215E0075EB5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EEC3A57271F215E0075EB5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A52B488F2723FD5500CDE624 /* MemberStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemberStoryboard.storyboard; sourceTree = "<group>"; };
+		A52B48912723FDAC00CDE624 /* ChattingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChattingStoryboard.storyboard; sourceTree = "<group>"; };
+		A52B48932723FDEE00CDE624 /* ProjectStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectStoryboard.storyboard; sourceTree = "<group>"; };
 		E2288D702721A2CD006079C4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		E2288D722721A30F006079C4 /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		E2288D742721A699006079C4 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 				E2288D722721A30F006079C4 /* MemberViewController.swift */,
 				E2288D742721A699006079C4 /* MyProfileViewController.swift */,
 				1EEC3A4F271F215B0075EB5A /* Main.storyboard */,
+				A52B48932723FDEE00CDE624 /* ProjectStoryboard.storyboard */,
+				A52B488F2723FD5500CDE624 /* MemberStoryboard.storyboard */,
+				A52B48912723FDAC00CDE624 /* ChattingStoryboard.storyboard */,
 				1EEC3A52271F215E0075EB5A /* Assets.xcassets */,
 				1EEC3A54271F215E0075EB5A /* LaunchScreen.storyboard */,
 				1EEC3A57271F215E0075EB5A /* Info.plist */,
@@ -143,8 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EEC3A56271F215E0075EB5A /* LaunchScreen.storyboard in Resources */,
+				A52B48942723FDEE00CDE624 /* ProjectStoryboard.storyboard in Resources */,
 				1EEC3A53271F215E0075EB5A /* Assets.xcassets in Resources */,
 				1EEC3A51271F215B0075EB5A /* Main.storyboard in Resources */,
+				A52B48922723FDAC00CDE624 /* ChattingStoryboard.storyboard in Resources */,
+				A52B48902723FD5500CDE624 /* MemberStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
