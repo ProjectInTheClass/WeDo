@@ -29,7 +29,9 @@ class CustomTableViewCell: UITableViewCell {
 
 
 
-class MemberViewController: UITableViewController {
+class MemberViewController: UITableViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var members: [Member] = [
         Member(name: "김토니", image: "dog", email: "vkennerley0@howstuffworks.com    ", contact: "010-1234-5678", profileMessage: "안녕하세요"),
@@ -40,11 +42,19 @@ class MemberViewController: UITableViewController {
         Member(name: "이수지", image: "tiger", email: "agladtbach6@dagondesign.com", contact: "010-9665-5945", profileMessage: "ㄴ엉"),
         Member(name: "현계림", image: "zebra", email: "agoudy11@examiner.com", contact: "010-3943-5885", profileMessage: "ㄴ어")
     ]
- 
+    
+    var filteredData: [Member]!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        searchBar.delegate = self
+        
+        filteredData = members
+
+        
     }
     
 
@@ -52,7 +62,7 @@ class MemberViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        members.count
+        return filteredData.count
     }
     
     
@@ -64,8 +74,8 @@ class MemberViewController: UITableViewController {
         cell.imageView!.clipsToBounds = true
         cell.imageView?.image = UIImage(contentsOfFile: members[indexPath.row].image)
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        cell.textLabel?.text = members[indexPath.row].name
-        cell.imageView?.image = UIImage(named: members[indexPath.row].image)
+        cell.textLabel?.text = filteredData[indexPath.row].name
+        cell.imageView?.image = UIImage(named: filteredData[indexPath.row].image)
         return cell
     }
     
@@ -83,17 +93,31 @@ class MemberViewController: UITableViewController {
         if (segue.identifier == "myProfileSegue") {
             let receiverVC = segue.destination as! MyProfileViewController
             
-            receiverVC.myName = members[memberIndex].name
-            receiverVC.myImage = UIImage(named: members[memberIndex].image)
-            receiverVC.myContact = members[memberIndex].contact
-            receiverVC.myEmail = members[memberIndex].email
-            receiverVC.myProfileMessage = members[memberIndex].profileMessage
+            receiverVC.myName = filteredData[memberIndex].name
+            receiverVC.myImage = UIImage(named: filteredData[memberIndex].image)
+            receiverVC.myContact = filteredData[memberIndex].contact
+            receiverVC.myEmail = filteredData[memberIndex].email
+            receiverVC.myProfileMessage = filteredData[memberIndex].profileMessage
             
 
         }
     }
     
-
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredData = []
+        
+        if searchText == "" {
+            filteredData = members
+        } else {
+            for member in members {
+                if member.name.lowercased().contains(searchText.lowercased()) {
+                    filteredData.append(member)
+                }
+            }
+        }
+        
+        self.tableView.reloadData()
+    }
 }
-
 
