@@ -27,19 +27,35 @@ class MyProfileViewController: UIViewController {
     var myContact: String?
     var myProfileMessage: String?
     
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var profileEmailLabel: UILabel!
     @IBOutlet weak var profileContactLabel: UILabel!
     @IBOutlet weak var profileMessageLabel: UILabel!
     
+    @IBOutlet weak var emailEditBtn: UIButton!
+    @IBOutlet weak var contactEditBtn: UIButton!
+    @IBOutlet weak var messageEditBtn: UIButton!
+    @IBOutlet weak var emailEditConfirmBtn: UIButton!
     
+    @IBOutlet weak var emailTextField: UITextField!
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        contactEditBtn.isHidden = true
+        messageEditBtn.isHidden = true
+        emailTextField.isHidden = true
+        emailEditBtn.isHidden = true
+        emailEditConfirmBtn.isHidden = true
+        emailTextField.isHidden = true
+
+        
+        
         
         
         profileImageView.image = myImage
@@ -47,8 +63,38 @@ class MyProfileViewController: UIViewController {
         profileEmailLabel.text = myEmail
         profileContactLabel.text = myContact
         profileMessageLabel.text = myProfileMessage
-        print("검사")
     }
+    
+    
+    @IBAction func editButtonPressed(_ sender: Any) {
+        emailEditBtn.isHidden = false
+        contactEditBtn.isHidden = false
+        messageEditBtn.isHidden = false
+    }
+    
+    @IBAction func editEmailButtonPressed(_ sender: Any) {
+        emailTextField.isHidden = false
+        emailEditBtn.isHidden = true
+        profileEmailLabel.isHidden = true
+        emailEditConfirmBtn.isHidden = false
+        profileEmailLabel.text = "\(myEmail!)"
+    }
+    
+    
+    
+    @IBAction func emailEditConfirmBtnPressed(_ sender: Any) {
+        
+        myEmail = emailTextField.text
+        profileEmailLabel.text = "\(myEmail!)"
+        emailEditConfirmBtn.isHidden = true
+        emailEditBtn.isHidden = false
+        emailTextField.isHidden = true
+        profileEmailLabel.isHidden = false
+    }
+    
+    
+    
+    
     
     
 

@@ -74,10 +74,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Un3-WM-gb1">
-                                <rect key="frame" x="20" y="357" width="36.5" height="179"/>
+                                <rect key="frame" x="20" y="357" width="36.5" height="224"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="teH-Vr-y5L">
-                                        <rect key="frame" x="0.0" y="0.0" width="36.5" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="36.5" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUK-HK-Koy">
                                                 <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
@@ -85,8 +85,13 @@
                                                 <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1p-UJ-VmV">
+                                                <rect key="frame" x="0.0" y="28" width="36.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XE-ni-kNA">
-                                                <rect key="frame" x="0.0" y="28" width="36.5" height="17"/>
+                                                <rect key="frame" x="0.0" y="73" width="36.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -94,7 +99,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Zhv-rW-FKF">
-                                        <rect key="frame" x="0.0" y="67" width="36.5" height="45"/>
+                                        <rect key="frame" x="0.0" y="112" width="36.5" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연락처" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwV-1L-7hf">
                                                 <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
@@ -111,7 +116,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="RNa-k7-aj6">
-                                        <rect key="frame" x="0.0" y="134" width="36.5" height="45"/>
+                                        <rect key="frame" x="0.0" y="179" width="36.5" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메세지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgz-ux-0RW">
                                                 <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
@@ -141,6 +146,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cco-Qt-RsF" userLabel="emailEditButton">
+                                <rect key="frame" x="352" y="362" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="editEmailButtonPressed:" destination="Fy5-jW-tt4" eventType="touchUpInside" id="PtM-yL-Ods"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-av-PdR" userLabel="contactEditButton">
+                                <rect key="frame" x="352" y="428" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQF-zp-uDm" userLabel="messageEditButton">
+                                <rect key="frame" x="352" y="489" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAO-yM-Fv9">
+                                <rect key="frame" x="349" y="365" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="확인"/>
+                                <connections>
+                                    <action selector="emailEditConfirmBtnPressed:" destination="Fy5-jW-tt4" eventType="touchUpInside" id="C8s-nz-sfp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pnk-hG-oXK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -155,9 +190,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NhF-E4-k5U">
-                        <barButtonItem key="rightBarButtonItem" title="편집" id="aPV-Nd-qXT"/>
+                        <barButtonItem key="rightBarButtonItem" title="편집" id="aPV-Nd-qXT">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="Fy5-jW-tt4" id="EwT-t8-XO2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="contactEditBtn" destination="mfG-av-PdR" id="BXe-i3-zkb"/>
+                        <outlet property="emailEditBtn" destination="cco-Qt-RsF" id="lOq-Xk-7Ed"/>
+                        <outlet property="emailEditConfirmBtn" destination="QAO-yM-Fv9" id="oa4-G6-Vzg"/>
+                        <outlet property="emailTextField" destination="N1p-UJ-VmV" id="P0T-dN-2dK"/>
+                        <outlet property="messageEditBtn" destination="hQF-zp-uDm" id="KJR-x6-9wF"/>
                         <outlet property="profileContactLabel" destination="ORw-nJ-eNU" id="WsI-u8-y13"/>
                         <outlet property="profileEmailLabel" destination="2XE-ni-kNA" id="jOS-v4-j31"/>
                         <outlet property="profileImageView" destination="MGY-gs-OUh" id="VvV-y8-pi4"/>
@@ -167,7 +211,303 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMY-p5-3n9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1969.5652173913045" y="-612.05357142857144"/>
+            <point key="canvasLocation" x="2212" y="-598"/>
+        </scene>
+        <!--My Profile View Controller-->
+        <scene sceneID="EHo-P7-JRO">
+            <objects>
+                <viewController id="Ezg-Hp-ceb" customClass="MyProfileViewController" customModule="WeDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Nh-XG-ErI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="tpB-81-Nau">
+                                <rect key="frame" x="20" y="313" width="36.5" height="224"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="haA-jz-Kfw">
+                                        <rect key="frame" x="0.0" y="0.0" width="36.5" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cx9-aO-FRa">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNf-A5-vUU">
+                                                <rect key="frame" x="0.0" y="28" width="36.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-Hp-24n">
+                                                <rect key="frame" x="0.0" y="73" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="vAr-Pi-VuR">
+                                        <rect key="frame" x="0.0" y="112" width="36.5" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연락처" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPW-vv-RmR">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOQ-0E-fAp">
+                                                <rect key="frame" x="0.0" y="28" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="0QP-cA-gTL">
+                                        <rect key="frame" x="0.0" y="179" width="36.5" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메세지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgz-45-Ols">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yun-dx-dcS">
+                                                <rect key="frame" x="0.0" y="28" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y1r-bf-3cH">
+                                <rect key="frame" x="0.0" y="84" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WOE-fo-hoA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qN-44-ijX">
+                                <rect key="frame" x="186.5" y="202" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyn-zS-228" userLabel="emailEditButton">
+                                <rect key="frame" x="352" y="362" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="editEmailButtonPressed:" destination="Ezg-Hp-ceb" eventType="touchUpInside" id="FiK-Qh-US7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFt-su-oDk" userLabel="contactEditButton">
+                                <rect key="frame" x="352" y="428" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSb-fL-4sp" userLabel="messageEditButton">
+                                <rect key="frame" x="352" y="489" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2E-3k-lXZ">
+                                <rect key="frame" x="349" y="365" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="확인"/>
+                                <connections>
+                                    <action selector="emailEditConfirmBtnPressed:" destination="Ezg-Hp-ceb" eventType="touchUpInside" id="cdB-e3-HUq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ORA-xg-8nV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y1r-bf-3cH" firstAttribute="trailing" secondItem="ORA-xg-8nV" secondAttribute="trailing" id="6cX-Jo-1y1"/>
+                            <constraint firstItem="Y1r-bf-3cH" firstAttribute="leading" secondItem="ORA-xg-8nV" secondAttribute="leading" id="Egj-Zx-UKE"/>
+                            <constraint firstItem="2qN-44-ijX" firstAttribute="centerX" secondItem="8Nh-XG-ErI" secondAttribute="centerX" id="MzX-E1-K4n"/>
+                            <constraint firstItem="tpB-81-Nau" firstAttribute="leading" secondItem="ORA-xg-8nV" secondAttribute="leading" constant="20" id="X6u-Dv-ekj"/>
+                            <constraint firstItem="tpB-81-Nau" firstAttribute="top" secondItem="ORA-xg-8nV" secondAttribute="top" constant="269" id="gov-HM-SCs"/>
+                            <constraint firstItem="Y1r-bf-3cH" firstAttribute="top" secondItem="ORA-xg-8nV" secondAttribute="top" constant="40" id="nFQ-S1-Rcj"/>
+                            <constraint firstItem="2qN-44-ijX" firstAttribute="top" secondItem="Y1r-bf-3cH" secondAttribute="bottom" constant="18" id="yaM-gP-UYn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ojo-N8-twd">
+                        <barButtonItem key="rightBarButtonItem" title="편집" id="8Zm-GT-7SR">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="Ezg-Hp-ceb" id="DnY-hP-BKm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contactEditBtn" destination="DFt-su-oDk" id="h5Z-r9-XtB"/>
+                        <outlet property="emailEditBtn" destination="Zyn-zS-228" id="XXC-ru-RR3"/>
+                        <outlet property="emailEditConfirmBtn" destination="N2E-3k-lXZ" id="IFT-2e-p8T"/>
+                        <outlet property="emailTextField" destination="UNf-A5-vUU" id="ZKm-Gp-I8U"/>
+                        <outlet property="messageEditBtn" destination="bSb-fL-4sp" id="KJc-N3-162"/>
+                        <outlet property="profileContactLabel" destination="rOQ-0E-fAp" id="eYx-Og-mv2"/>
+                        <outlet property="profileEmailLabel" destination="O5H-Hp-24n" id="1jK-iI-M3p"/>
+                        <outlet property="profileImageView" destination="Y1r-bf-3cH" id="iIg-7k-EZA"/>
+                        <outlet property="profileMessageLabel" destination="Yun-dx-dcS" id="Ezd-DQ-1ul"/>
+                        <outlet property="profileNameLabel" destination="2qN-44-ijX" id="hss-Cf-sev"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="izd-j6-44b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="-598"/>
+        </scene>
+        <!--My Profile View Controller-->
+        <scene sceneID="ejP-fL-tJb">
+            <objects>
+                <viewController id="keL-nt-A4e" customClass="MyProfileViewController" customModule="WeDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WfP-rw-xhC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="9u6-kL-qji">
+                                <rect key="frame" x="20" y="313" width="36.5" height="224"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="7DW-5g-SKN">
+                                        <rect key="frame" x="0.0" y="0.0" width="36.5" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxq-z1-SDm">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-CK-BIJ">
+                                                <rect key="frame" x="0.0" y="28" width="36.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXy-Ze-NJF">
+                                                <rect key="frame" x="0.0" y="73" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="sed-YA-byU">
+                                        <rect key="frame" x="0.0" y="112" width="36.5" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연락처" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvO-Qr-DdQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVk-He-s58">
+                                                <rect key="frame" x="0.0" y="28" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="6Bo-vB-0nM">
+                                        <rect key="frame" x="0.0" y="179" width="36.5" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메세지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3k-T1-Ys5">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcH-gn-fv2">
+                                                <rect key="frame" x="0.0" y="28" width="36.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oh0-Na-nSK">
+                                <rect key="frame" x="0.0" y="84" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="sOG-ow-8bn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdX-sy-7uy">
+                                <rect key="frame" x="186.5" y="202" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvL-NG-Ocg" userLabel="emailEditButton">
+                                <rect key="frame" x="352" y="362" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="editEmailButtonPressed:" destination="keL-nt-A4e" eventType="touchUpInside" id="Vch-kY-LjV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxp-dR-VOu" userLabel="contactEditButton">
+                                <rect key="frame" x="352" y="428" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2H-1O-3hP" userLabel="messageEditButton">
+                                <rect key="frame" x="352" y="489" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXe-5s-Zby">
+                                <rect key="frame" x="349" y="365" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="확인"/>
+                                <connections>
+                                    <action selector="emailEditConfirmBtnPressed:" destination="keL-nt-A4e" eventType="touchUpInside" id="P40-Ed-Nbj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Onq-Qv-D9N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vdX-sy-7uy" firstAttribute="top" secondItem="oh0-Na-nSK" secondAttribute="bottom" constant="18" id="0LG-rA-DC5"/>
+                            <constraint firstItem="9u6-kL-qji" firstAttribute="top" secondItem="Onq-Qv-D9N" secondAttribute="top" constant="269" id="84A-ID-VLX"/>
+                            <constraint firstItem="oh0-Na-nSK" firstAttribute="leading" secondItem="Onq-Qv-D9N" secondAttribute="leading" id="Hs7-iX-JT1"/>
+                            <constraint firstItem="oh0-Na-nSK" firstAttribute="top" secondItem="Onq-Qv-D9N" secondAttribute="top" constant="40" id="Rez-ZH-Pq0"/>
+                            <constraint firstItem="oh0-Na-nSK" firstAttribute="trailing" secondItem="Onq-Qv-D9N" secondAttribute="trailing" id="Wej-am-X9t"/>
+                            <constraint firstItem="9u6-kL-qji" firstAttribute="leading" secondItem="Onq-Qv-D9N" secondAttribute="leading" constant="20" id="bOG-rh-w2k"/>
+                            <constraint firstItem="vdX-sy-7uy" firstAttribute="centerX" secondItem="WfP-rw-xhC" secondAttribute="centerX" id="jvx-ty-3Hy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="drZ-CV-zpa">
+                        <barButtonItem key="rightBarButtonItem" title="편집" id="Ak9-2G-iev">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="keL-nt-A4e" id="1NI-Qx-ZEB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contactEditBtn" destination="rxp-dR-VOu" id="MqN-Am-jJy"/>
+                        <outlet property="emailEditBtn" destination="qvL-NG-Ocg" id="Egh-rE-Y7Z"/>
+                        <outlet property="emailEditConfirmBtn" destination="iXe-5s-Zby" id="xgZ-HW-T6p"/>
+                        <outlet property="emailTextField" destination="fyd-CK-BIJ" id="HWo-PY-wKD"/>
+                        <outlet property="messageEditBtn" destination="X2H-1O-3hP" id="ExH-2y-1fJ"/>
+                        <outlet property="profileContactLabel" destination="oVk-He-s58" id="7Mj-Jq-KmL"/>
+                        <outlet property="profileEmailLabel" destination="wXy-Ze-NJF" id="i40-IU-Qqk"/>
+                        <outlet property="profileImageView" destination="oh0-Na-nSK" id="gNm-Ox-FIk"/>
+                        <outlet property="profileMessageLabel" destination="rcH-gn-fv2" id="9qE-65-Yhq"/>
+                        <outlet property="profileNameLabel" destination="vdX-sy-7uy" id="2NV-fM-MRw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFL-yt-Alo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="-598"/>
         </scene>
         <!--Item-->
         <scene sceneID="I7B-eJ-IND">
@@ -191,6 +531,7 @@
         <image name="dog" width="223" height="226"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="113"/>
         <systemColor name="opaqueSeparatorColor">
