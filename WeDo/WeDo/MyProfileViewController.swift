@@ -47,6 +47,7 @@ class MyProfileViewController: UIViewController {
         profileEmailLabel.text = myEmail
         profileContactLabel.text = myContact
         profileMessageLabel.text = myProfileMessage
+        print("검사")
     }
     
     
