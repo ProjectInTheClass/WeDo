@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "zebra.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "zebra.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
