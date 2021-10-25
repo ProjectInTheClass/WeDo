@@ -53,17 +53,15 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
         searchBar.delegate = self
         
         filteredData = members
-
-        
     }
     
 
-    
-    
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredData.count
     }
+    
+    
     
     
     
@@ -119,5 +117,32 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
         
         self.tableView.reloadData()
     }
+    
+    @IBAction func settingButtonTapped(_ sender: Any) {
+        showActionsheet()
+        
+
+    }
+    
+    func showActionsheet() {
+        
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { action in
+            print("tapped Dismiss")
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "멤버삭제", style: .default, handler: { action in
+            print("tapped Dismiss")
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "전체설정", style: .default, handler: { action in
+            print("tapped Dismiss")
+        }))
+        
+ 
+        present(actionSheet, animated: true)
+    }
+    
 }
 

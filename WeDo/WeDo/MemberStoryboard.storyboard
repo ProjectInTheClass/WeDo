@@ -51,7 +51,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="멤버" id="BeX-vo-EfZ">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="gearshape.fill" catalog="system" id="Uie-oQ-H9n"/>
+                            <barButtonItem title="Item" image="gearshape.fill" catalog="system" id="Uie-oQ-H9n">
+                                <connections>
+                                    <action selector="settingButtonTapped:" destination="fGr-pj-hcx" id="SSE-jJ-ham"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Item" image="person.crop.circle.badge.plus" catalog="system" id="rs0-cm-pZU"/>
                             <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="Rjw-ng-TcL"/>
                         </rightBarButtonItems>

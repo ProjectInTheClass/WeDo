@@ -77,7 +77,7 @@ class MyProfileViewController: UIViewController {
         emailEditBtn.isHidden = true
         profileEmailLabel.isHidden = true
         emailEditConfirmBtn.isHidden = false
-        profileEmailLabel.text = "\(myEmail!)"
+        emailTextField.text = "\(myEmail!)"
     }
     
     
@@ -92,10 +92,7 @@ class MyProfileViewController: UIViewController {
         profileEmailLabel.isHidden = false
     }
     
-    
-    
-    
-    
+
     
 
 
