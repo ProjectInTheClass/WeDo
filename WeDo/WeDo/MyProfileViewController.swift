@@ -7,18 +7,8 @@
 
 import UIKit
 
-
-//extension UIImage { func resize(newWidth: CGFloat) -> UIImage {
-//    let scale = newWidth / self.size.width
-//    let newHeight = self.size.height * scale
-//    let size = CGSize(width: newWidth, height: newHeight)
-//    let render = UIGraphicsImageRenderer(size: size)
-//    let renderImage = render.image { context in self.draw(in: CGRect(origin: .zero, size: size)) }
-//    return renderImage
-//    }
-//}
     
-
+// ---- 데이터 마련되면 다시 진행할 작업
 class MyProfileViewController: UIViewController {
 
     var myName: String?
@@ -44,8 +34,6 @@ class MyProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         
         contactEditBtn.isHidden = true
         messageEditBtn.isHidden = true
@@ -55,9 +43,7 @@ class MyProfileViewController: UIViewController {
         emailTextField.isHidden = true
 
         
-        
-        
-        
+
         profileImageView.image = myImage
         profileNameLabel.text = myName
         profileEmailLabel.text = myEmail
@@ -67,12 +53,15 @@ class MyProfileViewController: UIViewController {
     
     
     @IBAction func editButtonPressed(_ sender: Any) {
+        
         emailEditBtn.isHidden = false
         contactEditBtn.isHidden = false
         messageEditBtn.isHidden = false
     }
     
+    
     @IBAction func editEmailButtonPressed(_ sender: Any) {
+        
         emailTextField.isHidden = false
         emailEditBtn.isHidden = true
         profileEmailLabel.isHidden = true
