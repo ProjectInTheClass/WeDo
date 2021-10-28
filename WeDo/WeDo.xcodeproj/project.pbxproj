@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E315BD027272AF600A876BF /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E315BCF27272AF600A876BF /* AddMemberViewController.swift */; };
 		1EEC3A4A271F215B0075EB5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC3A49271F215B0075EB5A /* AppDelegate.swift */; };
 		1EEC3A4C271F215B0075EB5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC3A4B271F215B0075EB5A /* SceneDelegate.swift */; };
 		1EEC3A4E271F215B0075EB5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC3A4D271F215B0075EB5A /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E315BCF27272AF600A876BF /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
 		1EEC3A46271F215B0075EB5A /* WeDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEC3A49271F215B0075EB5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EEC3A4B271F215B0075EB5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				1EEC3A52271F215E0075EB5A /* Assets.xcassets */,
 				1EEC3A54271F215E0075EB5A /* LaunchScreen.storyboard */,
 				1EEC3A57271F215E0075EB5A /* Info.plist */,
+				1E315BCF27272AF600A876BF /* AddMemberViewController.swift */,
 			);
 			path = WeDo;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E315BD027272AF600A876BF /* AddMemberViewController.swift in Sources */,
 				E2288D752721A699006079C4 /* MyProfileViewController.swift in Sources */,
 				1EEC3A4E271F215B0075EB5A /* ViewController.swift in Sources */,
 				1EEC3A4A271F215B0075EB5A /* AppDelegate.swift in Sources */,

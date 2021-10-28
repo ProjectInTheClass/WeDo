@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RTe-fb-cEX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RTe-fb-cEX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,7 +47,11 @@
                     <navigationItem key="navigationItem" title="멤버" id="BeX-vo-EfZ">
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="gearshape.fill" catalog="system" id="Uie-oQ-H9n"/>
-                            <barButtonItem title="Item" image="person.crop.circle.badge.plus" catalog="system" id="rs0-cm-pZU"/>
+                            <barButtonItem title="Item" image="person.crop.circle.badge.plus" catalog="system" id="rs0-cm-pZU">
+                                <connections>
+                                    <segue destination="8Cx-N2-QG5" kind="show" id="h9z-dI-uxd"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="Rjw-ng-TcL"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -180,9 +184,73 @@
             </objects>
             <point key="canvasLocation" x="216" y="-395"/>
         </scene>
+        <!--Add Member View Controller-->
+        <scene sceneID="Whj-bt-qcW">
+            <objects>
+                <viewController title="Add Member View Controller" id="8Cx-N2-QG5" customClass="AddMemberViewController" customModule="WeDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FWn-pP-bux">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="eZX-HC-MZq">
+                                <rect key="frame" x="0.0" y="179" width="414" height="219.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mOI-g3-s9d">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="o1i-nB-6KL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-VE-ipk">
+                                        <rect key="frame" x="186.5" y="134" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhP-jf-l5c">
+                                        <rect key="frame" x="162.5" y="188.5" width="89" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="+ 멤버 추가"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="lQs-CL-Qab">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="enL-8K-1ym">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YZw-P4-Zck"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eZX-HC-MZq" firstAttribute="leading" secondItem="YZw-P4-Zck" secondAttribute="leading" id="Mwh-95-CO4"/>
+                            <constraint firstItem="eZX-HC-MZq" firstAttribute="top" secondItem="lQs-CL-Qab" secondAttribute="bottom" constant="40" id="V5Q-mU-WeC"/>
+                            <constraint firstItem="eZX-HC-MZq" firstAttribute="centerX" secondItem="FWn-pP-bux" secondAttribute="centerX" id="Ygj-d4-NW8"/>
+                            <constraint firstItem="eZX-HC-MZq" firstAttribute="trailing" secondItem="YZw-P4-Zck" secondAttribute="trailing" id="ecx-bH-u7f"/>
+                            <constraint firstItem="lQs-CL-Qab" firstAttribute="top" secondItem="YZw-P4-Zck" secondAttribute="top" id="fd0-uh-zIt"/>
+                            <constraint firstItem="lQs-CL-Qab" firstAttribute="trailing" secondItem="YZw-P4-Zck" secondAttribute="trailing" id="opo-nN-o16"/>
+                            <constraint firstItem="lQs-CL-Qab" firstAttribute="leading" secondItem="YZw-P4-Zck" secondAttribute="leading" id="wjS-aj-ExH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cdZ-2s-gYt"/>
+                    <connections>
+                        <outlet property="addMember" destination="YhP-jf-l5c" id="zfv-l1-oc0"/>
+                        <outlet property="myImage" destination="mOI-g3-s9d" id="1NW-qO-MuF"/>
+                        <outlet property="myName" destination="uY5-VE-ipk" id="08w-D0-vh7"/>
+                        <outlet property="searchBar" destination="enL-8K-1ym" id="JEV-4D-k5Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAr-tc-mwh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1970" y="60"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="dog" width="223" height="226"/>
+        <image name="dog" width="111.5" height="113"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
