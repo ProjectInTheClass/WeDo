@@ -62,6 +62,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="2yZ-4g-ga2" id="4iI-US-aAl"/>
+                        <outlet property="settingBtn" destination="Uie-oQ-H9n" id="Ozh-tG-979"/>
                         <segue destination="Fy5-jW-tt4" kind="show" identifier="myProfileSegue" id="ePl-Ig-jP9"/>
                     </connections>
                 </tableViewController>

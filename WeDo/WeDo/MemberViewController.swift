@@ -31,6 +31,8 @@ class CustomTableViewCell: UITableViewCell {
 
 class MemberViewController: UITableViewController, UISearchBarDelegate {
     
+    
+    @IBOutlet weak var settingBtn: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var members: [Member] = [
@@ -120,24 +122,48 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
     
     @IBAction func settingButtonTapped(_ sender: Any) {
         showActionsheet()
-        
-
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete ) {
+            
+            print("멤버삭제, 남은 멤버: \(members.count)")
+            self.members.remove(at: indexPath.row)
+            
+            /*
+             계속 crash 발생
+             self.tableView.deleteRows(at: [indexPath], with: .automatic)
+
+             */
+             
+                     }
+    }
+    
+    
+    
+    
+//    var isEdit: Bool = true
     func showActionsheet() {
         
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         actionSheet.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { action in
-            print("tapped Dismiss")
         }))
         
         actionSheet.addAction(UIAlertAction(title: "멤버삭제", style: .default, handler: { action in
-            print("tapped Dismiss")
+            
+            self.tableView.isEditing = !self.tableView.isEditing
+            
+            if self.tableView.isEditing {
+                
+                self.navigationItem.rightBarButtonItem! = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: nil)
+            } else {
+                
+                self.navigationItem.rightBarButtonItem! = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.plain, target: self, action: nil)
+            }
         }))
         
         actionSheet.addAction(UIAlertAction(title: "전체설정", style: .default, handler: { action in
-            print("tapped Dismiss")
         }))
         
  
