@@ -22,6 +22,7 @@ class CustomTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.imageView?.frame = CGRect(x: 10,y: 0,width: 40,height: 40)
+//        self.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         self.textLabel?.frame = CGRect(x: 60, y: 10, width: self.frame.width - 45, height: 20)
     }
 }
@@ -42,16 +43,15 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
         Member(name: "현계림", image: "zebra", email: "agoudy11@examiner.com", contact: "010-3943-5885", profileMessage: "ㄴ어")
     ]
     
-    
-    
     var filteredData: [Member]!
+    
+    
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         searchBar.delegate = self
-
+        
         filteredData = members
     }
     
@@ -87,8 +87,6 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
         performSegue(withIdentifier: "myProfileSegue", sender: self)
     }
     
-    
-    //멤버 데이터 다음 화면으로 패스
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "myProfileSegue") {
             let receiverVC = segue.destination as! MyProfileViewController
@@ -103,8 +101,6 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
-    
-    //검색기능
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         filteredData = []
@@ -128,33 +124,20 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
 
     }
     
-
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-
-            print("멤버 삭제 전")
-            members.remove(at: indexPath.item)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            print("멤버 삭제 후")
-
-        }
-    }
-    
-    
     func showActionsheet() {
         
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         actionSheet.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { action in
+            print("tapped Dismiss")
         }))
         
         actionSheet.addAction(UIAlertAction(title: "멤버삭제", style: .default, handler: { action in
-            print("멤버삭제 들어옴")
-            self.tableView.isEditing = true
-            
+            print("tapped Dismiss")
         }))
         
         actionSheet.addAction(UIAlertAction(title: "전체설정", style: .default, handler: { action in
+            print("tapped Dismiss")
         }))
         
  
