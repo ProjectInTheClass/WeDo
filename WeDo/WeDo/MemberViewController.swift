@@ -129,9 +129,13 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
             
             print("멤버삭제, 남은 멤버: \(members.count)")
             self.members.remove(at: indexPath.row)
+            self.tableView.beginUpdates()
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.endUpdates()
+            
             
             /*
-             계속 crash 발생
+             crash 발생
              self.tableView.deleteRows(at: [indexPath], with: .automatic)
 
              */

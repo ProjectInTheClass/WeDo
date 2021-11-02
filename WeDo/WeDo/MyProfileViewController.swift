@@ -34,12 +34,15 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var profileContactLabel: UILabel!
     @IBOutlet weak var profileMessageLabel: UILabel!
     
-    @IBOutlet weak var emailEditBtn: UIButton!
-    @IBOutlet weak var contactEditBtn: UIButton!
-    @IBOutlet weak var messageEditBtn: UIButton!
-    @IBOutlet weak var emailEditConfirmBtn: UIButton!
+    @IBOutlet weak var editBtn: UIBarButtonItem!
+    @IBOutlet weak var emailPencilBtn: UIButton!
+    @IBOutlet weak var contactPencilBtn: UIButton!
+    @IBOutlet weak var messagePencilBtn: UIButton!
+    
     
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var contactTextField: UITextField!
+    @IBOutlet weak var messageTextField: UITextField!
     
     
     override func viewDidLoad() {
@@ -47,17 +50,16 @@ class MyProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        contactEditBtn.isHidden = true
-        messageEditBtn.isHidden = true
+        emailPencilBtn.isHidden = true
+        contactPencilBtn.isHidden = true
+        messagePencilBtn.isHidden = true
+        
+        
         emailTextField.isHidden = true
-        emailEditBtn.isHidden = true
-        emailEditConfirmBtn.isHidden = true
-        emailTextField.isHidden = true
+        contactTextField.isHidden = true
+        messageTextField.isHidden = true
 
-        
-        
-        
-        
+
         profileImageView.image = myImage
         profileNameLabel.text = myName
         profileEmailLabel.text = myEmail
@@ -67,35 +69,72 @@ class MyProfileViewController: UIViewController {
     
     
     @IBAction func editButtonPressed(_ sender: Any) {
-        emailEditBtn.isHidden = false
-        contactEditBtn.isHidden = false
-        messageEditBtn.isHidden = false
-    }
-    
-    @IBAction func editEmailButtonPressed(_ sender: Any) {
-        emailTextField.isHidden = false
-        emailEditBtn.isHidden = true
-        profileEmailLabel.isHidden = true
-        emailEditConfirmBtn.isHidden = false
-        emailTextField.text = "\(myEmail!)"
-    }
-    
-    
-    
-    @IBAction func emailEditConfirmBtnPressed(_ sender: Any) {
         
-        myEmail = emailTextField.text
-        profileEmailLabel.text = "\(myEmail!)"
-        emailEditConfirmBtn.isHidden = true
-        emailEditBtn.isHidden = false
-        emailTextField.isHidden = true
-        profileEmailLabel.isHidden = false
+        
+        self.isEditing = !self.isEditing
+        
+        if self.isEditing {
+            editBtn.title = "완료"
+            
+            emailTextField.isHidden = false
+            profileEmailLabel.isHidden = true
+            
+            contactTextField.isHidden = false
+            profileContactLabel.isHidden = true
+            
+            messageTextField.isHidden = false
+            profileMessageLabel.isHidden = true
+            
+            
+            
+            emailTextField.text = "\(myEmail!)"
+            contactTextField.text = "\(myContact!)"
+            messageTextField.text = "\(myProfileMessage!)"
+            
+            emailPencilBtn.isHidden = false
+            contactPencilBtn.isHidden = false
+            messagePencilBtn.isHidden = false
+
+            
+        } else {
+            editBtn.title = "편집"
+            myEmail = emailTextField.text
+            myContact = contactTextField.text
+            myProfileMessage = messageTextField.text
+
+            profileEmailLabel.text = "\(myEmail!)"
+            profileContactLabel.text = "\(myContact!)"
+            profileMessageLabel.text = "\(myProfileMessage!)"
+            
+            
+            
+            emailTextField.isHidden = true
+            profileEmailLabel.isHidden = false
+            
+            contactTextField.isHidden = true
+            profileContactLabel.isHidden = false
+            
+            messageTextField.isHidden = true
+            profileMessageLabel.isHidden = false
+            
+            
+            
+            emailPencilBtn.isHidden = true
+            contactPencilBtn.isHidden = true
+            messagePencilBtn.isHidden = true
+        }
+        
+        
+
     }
     
 
     
 
+    
 
+    
+    
     /*
     // MARK: - Navigation
 
