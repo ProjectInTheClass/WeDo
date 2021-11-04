@@ -13,12 +13,14 @@
 		1EEC3A51271F215B0075EB5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC3A4F271F215B0075EB5A /* Main.storyboard */; };
 		1EEC3A53271F215E0075EB5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC3A52271F215E0075EB5A /* Assets.xcassets */; };
 		1EEC3A56271F215E0075EB5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC3A54271F215E0075EB5A /* LaunchScreen.storyboard */; };
+		77641C0329248E70ACDD18CE /* Pods_WeDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D882F3BEF43BFC6B4024F2E3 /* Pods_WeDo.framework */; };
 		A52B48902723FD5500CDE624 /* MemberStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52B488F2723FD5500CDE624 /* MemberStoryboard.storyboard */; };
 		A52B48922723FDAC00CDE624 /* ChattingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52B48912723FDAC00CDE624 /* ChattingStoryboard.storyboard */; };
 		A52B48942723FDEE00CDE624 /* ProjectStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52B48932723FDEE00CDE624 /* ProjectStoryboard.storyboard */; };
 		E2288D712721A2CD006079C4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D702721A2CD006079C4 /* Member.swift */; };
 		E2288D732721A30F006079C4 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D722721A30F006079C4 /* MemberViewController.swift */; };
 		E2288D752721A699006079C4 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D742721A699006079C4 /* MyProfileViewController.swift */; };
+		E2E9B8DE2733D02E0091F233 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9B8DD2733D02E0091F233 /* ToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +35,13 @@
 		A52B488F2723FD5500CDE624 /* MemberStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemberStoryboard.storyboard; sourceTree = "<group>"; };
 		A52B48912723FDAC00CDE624 /* ChattingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChattingStoryboard.storyboard; sourceTree = "<group>"; };
 		A52B48932723FDEE00CDE624 /* ProjectStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectStoryboard.storyboard; sourceTree = "<group>"; };
+		D882F3BEF43BFC6B4024F2E3 /* Pods_WeDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC5AAD27C3B4F5C797AF1F7D /* Pods-WeDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeDo.debug.xcconfig"; path = "Target Support Files/Pods-WeDo/Pods-WeDo.debug.xcconfig"; sourceTree = "<group>"; };
 		E2288D702721A2CD006079C4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		E2288D722721A30F006079C4 /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		E2288D742721A699006079C4 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		E2E9B8DD2733D02E0091F233 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		F77418A5DFC061B1C11D25DD /* Pods-WeDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeDo.release.xcconfig"; path = "Target Support Files/Pods-WeDo/Pods-WeDo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,18 +49,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77641C0329248E70ACDD18CE /* Pods_WeDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D9FC363AA03873AFF96B0FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC5AAD27C3B4F5C797AF1F7D /* Pods-WeDo.debug.xcconfig */,
+				F77418A5DFC061B1C11D25DD /* Pods-WeDo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1EEC3A3D271F215B0075EB5A = {
 			isa = PBXGroup;
 			children = (
 				E2288D6F2721A2AC006079C4 /* Models */,
 				1EEC3A48271F215B0075EB5A /* WeDo */,
 				1EEC3A47271F215B0075EB5A /* Products */,
+				0D9FC363AA03873AFF96B0FF /* Pods */,
+				652DD99E0C417C0BBAF73F60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +93,7 @@
 				1EEC3A4D271F215B0075EB5A /* ViewController.swift */,
 				E2288D722721A30F006079C4 /* MemberViewController.swift */,
 				E2288D742721A699006079C4 /* MyProfileViewController.swift */,
+				E2E9B8DD2733D02E0091F233 /* ToDoViewController.swift */,
 				1EEC3A4F271F215B0075EB5A /* Main.storyboard */,
 				A52B488F2723FD5500CDE624 /* MemberStoryboard.storyboard */,
 				A52B48912723FDAC00CDE624 /* ChattingStoryboard.storyboard */,
@@ -83,6 +103,14 @@
 				1EEC3A57271F215E0075EB5A /* Info.plist */,
 			);
 			path = WeDo;
+			sourceTree = "<group>";
+		};
+		652DD99E0C417C0BBAF73F60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D882F3BEF43BFC6B4024F2E3 /* Pods_WeDo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E2288D6F2721A2AC006079C4 /* Models */ = {
@@ -100,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EEC3A5A271F215E0075EB5A /* Build configuration list for PBXNativeTarget "WeDo" */;
 			buildPhases = (
+				DCDE078D9B57C081ADF16E04 /* [CP] Check Pods Manifest.lock */,
 				1EEC3A42271F215B0075EB5A /* Sources */,
 				1EEC3A43271F215B0075EB5A /* Frameworks */,
 				1EEC3A44271F215B0075EB5A /* Resources */,
+				31FED0DABA39233A9E55CFD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,6 +192,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31FED0DABA39233A9E55CFD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeDo/Pods-WeDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeDo/Pods-WeDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeDo/Pods-WeDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCDE078D9B57C081ADF16E04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1EEC3A42271F215B0075EB5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -173,6 +245,7 @@
 				1EEC3A4C271F215B0075EB5A /* SceneDelegate.swift in Sources */,
 				E2288D732721A30F006079C4 /* MemberViewController.swift in Sources */,
 				E2288D712721A2CD006079C4 /* Member.swift in Sources */,
+				E2E9B8DE2733D02E0091F233 /* ToDoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +389,7 @@
 		};
 		1EEC3A5B271F215E0075EB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC5AAD27C3B4F5C797AF1F7D /* Pods-WeDo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,6 +418,7 @@
 		};
 		1EEC3A5C271F215E0075EB5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77418A5DFC061B1C11D25DD /* Pods-WeDo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

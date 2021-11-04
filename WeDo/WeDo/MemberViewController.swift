@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 
 class CustomTableViewCell: UITableViewCell {
@@ -44,6 +45,7 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
         Member(name: "이수지", image: "tiger", email: "agladtbach6@dagondesign.com", contact: "010-9665-5945", profileMessage: "ㄴ엉"),
         Member(name: "현계림", image: "zebra", email: "agoudy11@examiner.com", contact: "010-3943-5885", profileMessage: "ㄴ어")
     ]
+    
     
     var filteredData: [Member]!
     
