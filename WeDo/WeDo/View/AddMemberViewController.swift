@@ -14,7 +14,7 @@ class AddMemberViewController: UIViewController, UISearchBarDelegate{
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myName: UILabel!
     
-    let searchController = UISearchController(searchResultsController: nil)
+//    let searchController = UISearchController(searchResultsController: nil)
     
     var members: [Member] = [
         Member(name: "김토니", image: "dog", email: "vkennerley0@howstuffworks.com", contact: "010-1234-5678", profileMessage: "안녕하세요"),
@@ -44,6 +44,10 @@ class AddMemberViewController: UIViewController, UISearchBarDelegate{
                 searchedMember.append(word)
                 myImage.image = UIImage(named: word.image)
                 myName.text = word.name
+                break
+            } else {
+//                myImage.image =
+                myName.text = "검색 결과가 없습니다"
             }
         }
         self.myImage.reloadInputViews()
