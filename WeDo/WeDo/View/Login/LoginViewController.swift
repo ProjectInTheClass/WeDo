@@ -36,11 +36,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
     }
+    let sucAlert = UIAlertController(title: nil, message: "로그인에 성공하였습니다", preferredStyle: .actionSheet)
 }
 
 extension LoginViewController {
     
-    func didSuccessSignIn(_ result: SignInResult) {
-        
+    func didSuccessSignIn(_ result: LogInResult) {
+        UserDefaults.standard.string(forKey: "auth-token")
+        UserDefaults.standard.string(forKey: "userid")
+    }
+    
+    func failedToRequest(message: String) {
+        UserDefaults.standard.removeObject(forKey: "userid")
+        UserDefaults.standard.removeObject(forKey: "password")
     }
 }
