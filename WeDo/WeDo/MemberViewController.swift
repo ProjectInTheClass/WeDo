@@ -99,6 +99,11 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
             
             receiverVC.searchMembers = members
             
+        } else if (segue.identifier == "deleteSegue") {
+            let receiverVC = segue.destination as! DeleteTableViewController
+            
+            receiverVC.deleteMembers = members
+            
         }
         
     }
@@ -133,15 +138,19 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
         
         actionSheet.addAction(UIAlertAction(title: "멤버삭제", style: .default, handler: { action in
             
-            self.tableView.isEditing = !self.tableView.isEditing
+            self.performSegue(withIdentifier: "deleteSegue", sender: actionSheet)
+//            self.tableView.isEditing = !self.tableView.isEditing
+//
+//            if self.tableView.isEditing {
+//
+//                self.navigationItem.rightBarButtonItem! = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: nil)
+//            } else {
+//
+//                self.navigationItem.rightBarButtonItem! = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.plain, target: self, action: nil)
+//            }
             
-            if self.tableView.isEditing {
-                
-                self.navigationItem.rightBarButtonItem! = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: nil)
-            } else {
-                
-                self.navigationItem.rightBarButtonItem! = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.plain, target: self, action: nil)
-            }
+
+
         }))
         
         actionSheet.addAction(UIAlertAction(title: "전체설정", style: .default, handler: { action in
@@ -149,6 +158,16 @@ class MemberViewController: UITableViewController, UISearchBarDelegate {
         
  
         present(actionSheet, animated: true)
+    }
+    
+    func editButtonPressed(_ sender: Any) {
+        if tableView.isEditing {
+            tableView.setEditing(false, animated: true)
+            self.navigationItem.rightBarButtonItem!.title = "Edit"
+        } else {
+            tableView.setEditing(true, animated: true)
+            self.navigationItem.rightBarButtonItem!.title = "Done"
+        }
     }
     
 }

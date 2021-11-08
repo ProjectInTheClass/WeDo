@@ -62,6 +62,7 @@
                     <connections>
                         <outlet property="settingBtn" destination="Uie-oQ-H9n" id="Ozh-tG-979"/>
                         <segue destination="Fy5-jW-tt4" kind="show" identifier="myProfileSegue" id="ePl-Ig-jP9"/>
+                        <segue destination="wte-l6-G6a" kind="show" identifier="deleteSegue" id="vzj-4b-QZR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kC9-RH-sde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -104,7 +105,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUP-oh-9GZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2161" y="-687"/>
+            <point key="canvasLocation" x="2341" y="-1106"/>
         </scene>
         <!--My Profile View Controller-->
         <scene sceneID="oDO-JV-HGj">
@@ -257,7 +258,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMY-p5-3n9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2162" y="24"/>
+            <point key="canvasLocation" x="2341" y="-395"/>
+        </scene>
+        <!--Delete Table View Controller-->
+        <scene sceneID="IOw-5F-aX9">
+            <objects>
+                <tableViewController id="wte-l6-G6a" customClass="DeleteTableViewController" customModule="WeDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="udh-nv-GCA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myDeleteCell" id="pxQ-xD-RfH">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pxQ-xD-RfH" id="IPQ-Mq-C6i">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wte-l6-G6a" id="Bt4-fx-Pc1"/>
+                            <outlet property="delegate" destination="wte-l6-G6a" id="awL-oR-jze"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="PdG-oL-TzH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjr-mz-hiP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2341" y="362"/>
         </scene>
         <!--Item-->
         <scene sceneID="I7B-eJ-IND">
@@ -278,7 +308,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nVd-nc-Bjd"/>
+        <segue reference="ePl-Ig-jP9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="dog" width="223" height="226"/>
