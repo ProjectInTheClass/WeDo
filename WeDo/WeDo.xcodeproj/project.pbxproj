@@ -20,6 +20,7 @@
 		E2288D712721A2CD006079C4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D702721A2CD006079C4 /* Member.swift */; };
 		E2288D732721A30F006079C4 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D722721A30F006079C4 /* MemberViewController.swift */; };
 		E2288D752721A699006079C4 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D742721A699006079C4 /* MyProfileViewController.swift */; };
+		E2E5F7EC27390E61005C3347 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E5F7EB27390E61005C3347 /* SearchTableViewController.swift */; };
 		E2E9B8DE2733D02E0091F233 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9B8DD2733D02E0091F233 /* ToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		E2288D702721A2CD006079C4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		E2288D722721A30F006079C4 /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		E2288D742721A699006079C4 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		E2E5F7EB27390E61005C3347 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		E2E9B8DD2733D02E0091F233 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		F77418A5DFC061B1C11D25DD /* Pods-WeDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeDo.release.xcconfig"; path = "Target Support Files/Pods-WeDo/Pods-WeDo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +64,6 @@
 				DC5AAD27C3B4F5C797AF1F7D /* Pods-WeDo.debug.xcconfig */,
 				F77418A5DFC061B1C11D25DD /* Pods-WeDo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -92,6 +93,7 @@
 				1EEC3A4B271F215B0075EB5A /* SceneDelegate.swift */,
 				1EEC3A4D271F215B0075EB5A /* ViewController.swift */,
 				E2288D722721A30F006079C4 /* MemberViewController.swift */,
+				E2E5F7EB27390E61005C3347 /* SearchTableViewController.swift */,
 				E2288D742721A699006079C4 /* MyProfileViewController.swift */,
 				E2E9B8DD2733D02E0091F233 /* ToDoViewController.swift */,
 				1EEC3A4F271F215B0075EB5A /* Main.storyboard */,
@@ -246,6 +248,7 @@
 				E2288D732721A30F006079C4 /* MemberViewController.swift in Sources */,
 				E2288D712721A2CD006079C4 /* Member.swift in Sources */,
 				E2E9B8DE2733D02E0091F233 /* ToDoViewController.swift in Sources */,
+				E2E5F7EC27390E61005C3347 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
