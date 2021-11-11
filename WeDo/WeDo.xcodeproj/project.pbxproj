@@ -26,6 +26,8 @@
 		E2288D712721A2CD006079C4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D702721A2CD006079C4 /* Member.swift */; };
 		E2288D732721A30F006079C4 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D722721A30F006079C4 /* MemberViewController.swift */; };
 		E2288D752721A699006079C4 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D742721A699006079C4 /* MyProfileViewController.swift */; };
+		E2662C3B273CF9AB00553BF6 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2662C3A273CF9AB00553BF6 /* SearchTableViewController.swift */; };
+		E2662C3D273CF9C000553BF6 /* DeleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2662C3C273CF9C000553BF6 /* DeleteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		E2288D702721A2CD006079C4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		E2288D722721A30F006079C4 /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		E2288D742721A699006079C4 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		E2662C3A273CF9AB00553BF6 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		E2662C3C273CF9C000553BF6 /* DeleteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +86,8 @@
 		1E03DB582734534600513440 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2662C3E273D075000553BF6 /* FirstTab */,
 				1ECF606227398EA5005AF2C4 /* Login */,
-				1E315BCF27272AF600A876BF /* AddMemberViewController.swift */,
-				E2288D742721A699006079C4 /* MyProfileViewController.swift */,
-				E2288D722721A30F006079C4 /* MemberViewController.swift */,
 				1EEC3A4D271F215B0075EB5A /* ViewController.swift */,
 			);
 			path = View;
@@ -173,6 +175,18 @@
 				E2288D702721A2CD006079C4 /* Member.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E2662C3E273D075000553BF6 /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				1E315BCF27272AF600A876BF /* AddMemberViewController.swift */,
+				E2288D742721A699006079C4 /* MyProfileViewController.swift */,
+				E2288D722721A30F006079C4 /* MemberViewController.swift */,
+				E2662C3C273CF9C000553BF6 /* DeleteTableViewController.swift */,
+				E2662C3A273CF9AB00553BF6 /* SearchTableViewController.swift */,
+			);
+			path = FirstTab;
 			sourceTree = "<group>";
 		};
 		E4DE7F59CA8669F4B3295D83 /* Frameworks */ = {
@@ -309,9 +323,11 @@
 				1EEC3A4E271F215B0075EB5A /* ViewController.swift in Sources */,
 				1EEC3A4A271F215B0075EB5A /* AppDelegate.swift in Sources */,
 				1E03DB5C27345A3F00513440 /* LoginViewController.swift in Sources */,
+				E2662C3B273CF9AB00553BF6 /* SearchTableViewController.swift in Sources */,
 				1EEC3A4C271F215B0075EB5A /* SceneDelegate.swift in Sources */,
 				E2288D732721A30F006079C4 /* MemberViewController.swift in Sources */,
 				1ECF6065273990A1005AF2C4 /* LogInRequest.swift in Sources */,
+				E2662C3D273CF9C000553BF6 /* DeleteTableViewController.swift in Sources */,
 				E2288D712721A2CD006079C4 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

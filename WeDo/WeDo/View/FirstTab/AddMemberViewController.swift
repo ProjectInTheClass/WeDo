@@ -32,7 +32,6 @@ class AddMemberViewController: UIViewController, UISearchBarDelegate{
         super.viewDidLoad()
         
         self.searchBar.delegate = self
-
         // Do any additional setup after loading the view.
     }
     
@@ -45,8 +44,14 @@ class AddMemberViewController: UIViewController, UISearchBarDelegate{
                 myImage.image = UIImage(named: word.image)
                 myName.text = word.name
                 break
+            }
+             // [글을 삭제 했을 때 사진과 이름이 사라지지 않는 문제]
+             // 근본적인 해결은 아닐 수 있지만 아래처럼 검색창에 아무것도 없을 때 이미지와 텍스트 둘 다 Nil로 설정하는 건 어떨까요?
+             // 아니면 isHidden을 사용해서?!
+            else if searchText == ""{
+                myImage.image = nil
+                myName.text = nil
             } else {
-//                myImage.image =
                 myName.text = "검색 결과가 없습니다"
             }
         }
