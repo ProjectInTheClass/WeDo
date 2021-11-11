@@ -34,15 +34,12 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var profileContactLabel: UILabel!
     @IBOutlet weak var profileMessageLabel: UILabel!
     
-    @IBOutlet weak var editBtn: UIBarButtonItem!
-    @IBOutlet weak var emailPencilBtn: UIButton!
-    @IBOutlet weak var contactPencilBtn: UIButton!
-    @IBOutlet weak var messagePencilBtn: UIButton!
-    
+    @IBOutlet weak var emailEditBtn: UIButton!
+    @IBOutlet weak var contactEditBtn: UIButton!
+    @IBOutlet weak var messageEditBtn: UIButton!
+    @IBOutlet weak var emailEditConfirmBtn: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var contactTextField: UITextField!
-    @IBOutlet weak var messageTextField: UITextField!
     
     
     
@@ -55,11 +52,11 @@ class MyProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        emailPencilBtn.isHidden = true
-        contactPencilBtn.isHidden = true
-        messagePencilBtn.isHidden = true
-        
-        
+        contactEditBtn.isHidden = true
+        messageEditBtn.isHidden = true
+        emailTextField.isHidden = true
+        emailEditBtn.isHidden = true
+        emailEditConfirmBtn.isHidden = true
         emailTextField.isHidden = true
         contactTextField.isHidden = true
         messageTextField.isHidden = true
@@ -79,6 +76,22 @@ class MyProfileViewController: UIViewController {
     
     
     @IBAction func editButtonPressed(_ sender: Any) {
+        emailEditBtn.isHidden = false
+        contactEditBtn.isHidden = false
+        messageEditBtn.isHidden = false
+    }
+    
+    @IBAction func editEmailButtonPressed(_ sender: Any) {
+        emailTextField.isHidden = false
+        emailEditBtn.isHidden = true
+        profileEmailLabel.isHidden = true
+        emailEditConfirmBtn.isHidden = false
+        emailTextField.text = "\(myEmail!)"
+    }
+    
+    
+    
+    @IBAction func emailEditConfirmBtnPressed(_ sender: Any) {
         
         
         self.isEditing = !self.isEditing
