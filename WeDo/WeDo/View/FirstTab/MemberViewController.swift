@@ -113,15 +113,7 @@ class MemberViewController: UITableViewController {
         showActionsheet()
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete ) {
-            
-            print("멤버삭제, 남은 멤버: \(members.count)")
-            
-            self.members.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-         }
-    }
+
     
     
     
