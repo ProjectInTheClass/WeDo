@@ -71,7 +71,4 @@ class DeleteTableViewController: UITableViewController, UISearchBarDelegate {
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
          }
     }
-
-
-    
 }
