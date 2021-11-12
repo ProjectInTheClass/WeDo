@@ -15,7 +15,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="3tA-Ex-vrv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exampleChatCell" id="09R-f0-DKk">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
@@ -75,34 +75,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="v9t-UD-UGw">
-                                <rect key="frame" x="0.0" y="88" width="414" height="474"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GK5-fM-wPK">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GK5-fM-wPK" id="mYR-Y5-cOL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.up.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tUm-Bq-4Ti">
+                                <rect key="frame" x="357" y="765" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="KcJ-FW-7sX" userLabel="checklist">
-                                <rect key="frame" x="322" y="698" width="44.5" height="45"/>
+                                <rect key="frame" x="350" y="704" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="list.bullet.rectangle.portrait" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="aMe-ZE-hIJ" userLabel="todo">
-                                <rect key="frame" x="322" y="698" width="44.5" height="45"/>
+                                <rect key="frame" x="350" y="704" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="app.badge.checkmark" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86D-cl-o0z" userLabel="+">
-                                <rect key="frame" x="322" y="698" width="44.5" height="45"/>
+                                <rect key="frame" x="350" y="704" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="plus.app.fill" catalog="system"/>
@@ -110,15 +101,15 @@
                                     <action selector="plusBtnTapped:" destination="Ikr-nU-FoC" eventType="touchUpInside" id="rF4-KT-wPs"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="대화를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdv-Hl-hD0">
+                                <rect key="frame" x="20" y="764" width="329" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3cK-X8-OSz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="v9t-UD-UGw" firstAttribute="leading" secondItem="3cK-X8-OSz" secondAttribute="leading" id="Bf9-dA-0ph"/>
-                            <constraint firstItem="v9t-UD-UGw" firstAttribute="top" secondItem="3cK-X8-OSz" secondAttribute="top" id="ISb-zH-7j8"/>
-                            <constraint firstItem="3cK-X8-OSz" firstAttribute="trailing" secondItem="v9t-UD-UGw" secondAttribute="trailing" id="kHU-pm-Byz"/>
-                            <constraint firstItem="3cK-X8-OSz" firstAttribute="bottom" secondItem="v9t-UD-UGw" secondAttribute="bottom" constant="300" id="lXU-Y6-8o8"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.91817468400000002" green="0.89631277320000002" blue="0.99216991659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="0wE-G0-COb">
                         <rightBarButtonItems>
@@ -128,6 +119,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="checklistBtn" destination="KcJ-FW-7sX" id="GRJ-Nw-TO3"/>
+                        <outlet property="myTextField" destination="jdv-Hl-hD0" id="2Ox-32-zgV"/>
                         <outlet property="plusBtn" destination="86D-cl-o0z" id="JzF-bM-MP7"/>
                         <outlet property="todoBtn" destination="aMe-ZE-hIJ" id="7AE-2v-VTi"/>
                     </connections>
@@ -187,6 +179,7 @@
     </scenes>
     <resources>
         <image name="app.badge.checkmark" catalog="system" width="128" height="115"/>
+        <image name="arrow.up.circle.fill" catalog="system" width="128" height="121"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
@@ -194,11 +187,11 @@
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="plus.message" catalog="system" width="128" height="113"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
