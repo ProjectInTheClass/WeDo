@@ -28,6 +28,8 @@
 		E2288D752721A699006079C4 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2288D742721A699006079C4 /* MyProfileViewController.swift */; };
 		E2662C3B273CF9AB00553BF6 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2662C3A273CF9AB00553BF6 /* SearchTableViewController.swift */; };
 		E2662C3D273CF9C000553BF6 /* DeleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2662C3C273CF9C000553BF6 /* DeleteTableViewController.swift */; };
+		E2662C41273E0D4700553BF6 /* SelectChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2662C40273E0D4700553BF6 /* SelectChatRoomTableViewController.swift */; };
+		E2662C45273E32FA00553BF6 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2662C44273E32FA00553BF6 /* ChatRoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		E2288D742721A699006079C4 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		E2662C3A273CF9AB00553BF6 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		E2662C3C273CF9C000553BF6 /* DeleteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableViewController.swift; sourceTree = "<group>"; };
+		E2662C40273E0D4700553BF6 /* SelectChatRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectChatRoomTableViewController.swift; sourceTree = "<group>"; };
+		E2662C44273E32FA00553BF6 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				1EEC3A54271F215E0075EB5A /* LaunchScreen.storyboard */,
-				A52B48912723FDAC00CDE624 /* ChattingStoryboard.storyboard */,
 				A52B488F2723FD5500CDE624 /* MemberStoryboard.storyboard */,
+				A52B48912723FDAC00CDE624 /* ChattingStoryboard.storyboard */,
 				A52B48932723FDEE00CDE624 /* ProjectStoryboard.storyboard */,
 				1EEC3A4F271F215B0075EB5A /* Main.storyboard */,
 				1E03DB592734567E00513440 /* LoginStoryboard.storyboard */,
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				E2662C3E273D075000553BF6 /* FirstTab */,
+				E2662C3F273E0D3100553BF6 /* SecondTab */,
 				1ECF606227398EA5005AF2C4 /* Login */,
 				1EEC3A4D271F215B0075EB5A /* ViewController.swift */,
 			);
@@ -187,6 +192,15 @@
 				E2662C3A273CF9AB00553BF6 /* SearchTableViewController.swift */,
 			);
 			path = FirstTab;
+			sourceTree = "<group>";
+		};
+		E2662C3F273E0D3100553BF6 /* SecondTab */ = {
+			isa = PBXGroup;
+			children = (
+				E2662C40273E0D4700553BF6 /* SelectChatRoomTableViewController.swift */,
+				E2662C44273E32FA00553BF6 /* ChatRoomViewController.swift */,
+			);
+			path = SecondTab;
 			sourceTree = "<group>";
 		};
 		E4DE7F59CA8669F4B3295D83 /* Frameworks */ = {
@@ -316,7 +330,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2662C41273E0D4700553BF6 /* SelectChatRoomTableViewController.swift in Sources */,
 				1ECF606B2739AA7F005AF2C4 /* LogInDataManager.swift in Sources */,
+				E2662C45273E32FA00553BF6 /* ChatRoomViewController.swift in Sources */,
 				1ECF6067273990B0005AF2C4 /* LogInResponse.swift in Sources */,
 				1E315BD027272AF600A876BF /* AddMemberViewController.swift in Sources */,
 				E2288D752721A699006079C4 /* MyProfileViewController.swift in Sources */,

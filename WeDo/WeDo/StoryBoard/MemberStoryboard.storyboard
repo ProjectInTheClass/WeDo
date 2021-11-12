@@ -39,6 +39,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="fGr-pj-hcx" id="7fU-7h-wJF"/>
                             <outlet property="delegate" destination="fGr-pj-hcx" id="5rY-g8-uQT"/>

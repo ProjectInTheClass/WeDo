@@ -7,6 +7,12 @@
 
 import Foundation
 
+//struct divideSection {
+//    var sectionName: String!
+//    var sectionObject: [Member]!
+//}
+
+
 struct Member {
     var name: String
     var image: String

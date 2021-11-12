@@ -11,7 +11,7 @@
         <!--채팅-->
         <scene sceneID="B9b-Wl-7Vx">
             <objects>
-                <tableViewController id="RNt-zj-0EW" sceneMemberID="viewController">
+                <tableViewController id="RNt-zj-0EW" customClass="SelectChatRoomTableViewController" customModule="WeDo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="3tA-Ex-vrv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,14 +31,110 @@
                             <outlet property="delegate" destination="RNt-zj-0EW" id="Qb8-kE-tH6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="채팅" id="6aV-uL-gne"/>
+                    <navigationItem key="navigationItem" title="채팅" id="6aV-uL-gne">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="gearshape.fill" catalog="system" id="H5T-JR-ckp">
+                                <connections>
+                                    <action selector="settingBtnTapped:" destination="RNt-zj-0EW" id="RV6-lb-hQ6"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="plus.message" catalog="system" id="WbD-ax-c0p"/>
+                            <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="Hl3-Mf-7Wk"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
-                        <segue destination="eW4-7g-GY0" kind="show" id="WdZ-Da-1mz"/>
+                        <segue destination="GUT-aZ-SaF" kind="show" identifier="deleteChatSegue" id="C3U-ji-mm4"/>
+                        <segue destination="Ikr-nU-FoC" kind="show" identifier="chattingRoom" id="F95-kC-iYH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1c-V4-f8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1194" y="283"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="R6a-R6-Ws7">
+            <objects>
+                <viewController id="GUT-aZ-SaF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0cJ-fl-ADc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GG6-jG-8Df"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="14v-oD-cgT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="in1-ev-0jl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2219" y="-223"/>
+        </scene>
+        <!--Chat Room View Controller-->
+        <scene sceneID="1gy-Vf-C0K">
+            <objects>
+                <viewController id="Ikr-nU-FoC" customClass="ChatRoomViewController" customModule="WeDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nTi-AB-1Zg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="v9t-UD-UGw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="474"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GK5-fM-wPK">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GK5-fM-wPK" id="mYR-Y5-cOL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="KcJ-FW-7sX" userLabel="checklist">
+                                <rect key="frame" x="322" y="698" width="44.5" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="list.bullet.rectangle.portrait" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="aMe-ZE-hIJ" userLabel="todo">
+                                <rect key="frame" x="322" y="698" width="44.5" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="app.badge.checkmark" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86D-cl-o0z" userLabel="+">
+                                <rect key="frame" x="322" y="698" width="44.5" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="plus.app.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="plusBtnTapped:" destination="Ikr-nU-FoC" eventType="touchUpInside" id="rF4-KT-wPs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3cK-X8-OSz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v9t-UD-UGw" firstAttribute="leading" secondItem="3cK-X8-OSz" secondAttribute="leading" id="Bf9-dA-0ph"/>
+                            <constraint firstItem="v9t-UD-UGw" firstAttribute="top" secondItem="3cK-X8-OSz" secondAttribute="top" id="ISb-zH-7j8"/>
+                            <constraint firstItem="3cK-X8-OSz" firstAttribute="trailing" secondItem="v9t-UD-UGw" secondAttribute="trailing" id="kHU-pm-Byz"/>
+                            <constraint firstItem="3cK-X8-OSz" firstAttribute="bottom" secondItem="v9t-UD-UGw" secondAttribute="bottom" constant="300" id="lXU-Y6-8o8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0wE-G0-COb">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="line.3.horizontal" catalog="system" id="uTk-B3-x78"/>
+                            <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="ybV-HM-5zw"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="checklistBtn" destination="KcJ-FW-7sX" id="GRJ-Nw-TO3"/>
+                        <outlet property="plusBtn" destination="86D-cl-o0z" id="JzF-bM-MP7"/>
+                        <outlet property="todoBtn" destination="aMe-ZE-hIJ" id="7AE-2v-VTi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UvF-sc-cRD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2218.840579710145" y="481.47321428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="94M-X8-Yj2">
@@ -69,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aU-GM-hVL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072" y="283"/>
+            <point key="canvasLocation" x="2219" y="1239"/>
         </scene>
         <!--Item-->
         <scene sceneID="P0G-Ep-0xs">
@@ -90,8 +186,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="app.badge.checkmark" catalog="system" width="128" height="115"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="message" catalog="system" width="128" height="113"/>
+        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
+        <image name="plus.message" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
