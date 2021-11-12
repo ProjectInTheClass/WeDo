@@ -32,17 +32,21 @@ class ChatRoomViewController: UIViewController {
             todoBtn.isHidden = false
             checklistBtn.isHidden = false
             
-            UIView.animate(withDuration: 0.5, animations: {
-                self.todoBtn.frame.origin.y -= 50
-                self.checklistBtn.frame.origin.y -= 100
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseIn, animations: {
+                self.todoBtn.alpha = 1.0
+                self.checklistBtn.alpha = 1.0
+                self.todoBtn.frame.origin.y -= 55
+                self.checklistBtn.frame.origin.y -= 110
             }, completion: nil)
             
         } else {
             
             DispatchQueue.global().sync {
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.todoBtn.frame.origin.y += 50
-                    self.checklistBtn.frame.origin.y += 100
+                UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseOut, animations: {
+                    self.todoBtn.alpha = 0.0
+                    self.checklistBtn.alpha = 0.0
+                    self.todoBtn.frame.origin.y += 55
+                    self.checklistBtn.frame.origin.y += 110
                 }) {
                     finished in
                     self.todoBtn.isHidden = true
