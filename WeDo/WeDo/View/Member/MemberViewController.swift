@@ -31,6 +31,8 @@ class CustomTableViewCell: UITableViewCell {
 
 class MemberViewController: UITableViewController {
     
+    lazy var dataManager: MemberListDataManager = MemberListDataManager()
+    
     var members: [Member] = [
         Member(name: "김토니", image: "dog", email: "vkennerley0@howstuffworks.com", contact: "010-1234-5678", profileMessage: "안녕하세요"),
         Member(name: "김춘삼", image: "cat", email: "rhanratty1@sina.com", contact: "010-4543-4343", profileMessage: "안녕하세요2"),
@@ -44,7 +46,8 @@ class MemberViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        dataManager.getMemberList(delegate: self)
     }
     
 
@@ -54,7 +57,6 @@ class MemberViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         members.count
     }
-    
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

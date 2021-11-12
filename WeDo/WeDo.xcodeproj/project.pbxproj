@@ -10,6 +10,8 @@
 		1E03DB5A2734567E00513440 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E03DB592734567E00513440 /* LoginStoryboard.storyboard */; };
 		1E03DB5C27345A3F00513440 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03DB5B27345A3F00513440 /* LoginViewController.swift */; };
 		1E315BD027272AF600A876BF /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E315BCF27272AF600A876BF /* AddMemberViewController.swift */; };
+		1EAE8A94273E5A7200622396 /* MemberListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8A93273E5A7200622396 /* MemberListResponse.swift */; };
+		1EAE8A96273E5BFF00622396 /* MemberListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8A95273E5BFF00622396 /* MemberListDataManager.swift */; };
 		1ECF6065273990A1005AF2C4 /* LogInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECF6064273990A1005AF2C4 /* LogInRequest.swift */; };
 		1ECF6067273990B0005AF2C4 /* LogInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECF6066273990B0005AF2C4 /* LogInResponse.swift */; };
 		1ECF606B2739AA7F005AF2C4 /* LogInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECF606A2739AA7F005AF2C4 /* LogInDataManager.swift */; };
@@ -32,6 +34,8 @@
 		1E03DB592734567E00513440 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		1E03DB5B27345A3F00513440 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1E315BCF27272AF600A876BF /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
+		1EAE8A93273E5A7200622396 /* MemberListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListResponse.swift; sourceTree = "<group>"; };
+		1EAE8A95273E5BFF00622396 /* MemberListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListDataManager.swift; sourceTree = "<group>"; };
 		1ECF6064273990A1005AF2C4 /* LogInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRequest.swift; sourceTree = "<group>"; };
 		1ECF6066273990B0005AF2C4 /* LogInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInResponse.swift; sourceTree = "<group>"; };
 		1ECF606A2739AA7F005AF2C4 /* LogInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInDataManager.swift; sourceTree = "<group>"; };
@@ -82,13 +86,31 @@
 		1E03DB582734534600513440 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1EAE8A90273E59A300622396 /* Member */,
 				1ECF606227398EA5005AF2C4 /* Login */,
 				1E315BCF27272AF600A876BF /* AddMemberViewController.swift */,
 				E2288D742721A699006079C4 /* MyProfileViewController.swift */,
-				E2288D722721A30F006079C4 /* MemberViewController.swift */,
 				1EEC3A4D271F215B0075EB5A /* ViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1EAE8A90273E59A300622396 /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				1EAE8A91273E59BB00622396 /* Entity */,
+				E2288D722721A30F006079C4 /* MemberViewController.swift */,
+				1EAE8A95273E5BFF00622396 /* MemberListDataManager.swift */,
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
+		1EAE8A91273E59BB00622396 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1EAE8A93273E5A7200622396 /* MemberListResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		1ECF606227398EA5005AF2C4 /* Login */ = {
@@ -303,7 +325,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ECF606B2739AA7F005AF2C4 /* LogInDataManager.swift in Sources */,
+				1EAE8A96273E5BFF00622396 /* MemberListDataManager.swift in Sources */,
 				1ECF6067273990B0005AF2C4 /* LogInResponse.swift in Sources */,
+				1EAE8A94273E5A7200622396 /* MemberListResponse.swift in Sources */,
 				1E315BD027272AF600A876BF /* AddMemberViewController.swift in Sources */,
 				E2288D752721A699006079C4 /* MyProfileViewController.swift in Sources */,
 				1EEC3A4E271F215B0075EB5A /* ViewController.swift in Sources */,

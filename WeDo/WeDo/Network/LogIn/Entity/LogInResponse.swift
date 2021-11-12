@@ -17,13 +17,13 @@ struct LogInResponse: Codable {
 struct LogInResult: Codable {
     let authToken: String
     let email: String
-    let mod_date: Date
+    let mod_date: String
     let name: String
     let password: String
     let phone: String
     let profileImgUrl: String
-    let reg_date: Date
+    let reg_date: String
     let statusMsg: String
     let userid: String
-    let userno: Int
+    let userno: Int64
 }

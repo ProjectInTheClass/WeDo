@@ -11,7 +11,7 @@ import Alamofire
 struct LogInDataManager {
     static let shared = LogInDataManager()
     
-    let URL = "https://115.85.183.225:7989/v1/api/user/login"
+    let URL = "http://115.85.183.225:7989/v1/api/user/login"
     
     func postLogIn(_ parameters: LogInRequest, delegate: LoginViewController) {
             AF.request(URL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: [ "Content-Type":"application/json"])

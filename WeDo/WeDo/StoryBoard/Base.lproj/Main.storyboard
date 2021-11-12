@@ -31,7 +31,7 @@
         <!--MemberStoryboard-->
         <scene sceneID="IeA-gQ-gJV">
             <objects>
-                <viewControllerPlaceholder storyboardName="MemberStoryboard" id="iA9-3O-88e" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MemberViewController" storyboardName="MemberStoryboard" id="iA9-3O-88e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Vma-Z4-pW2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwc-ez-uJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -66,41 +66,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5k-H5-tXK">
-                                <rect key="frame" x="20" y="636" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O25-Ev-wtz">
-                                <rect key="frame" x="20" y="720" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.52862591510000001" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="로그인"/>
-                                <connections>
-                                    <action selector="loginBtnTap:" destination="Mr1-3x-Ar4" eventType="touchUpInside" id="zMO-Yi-fDD"/>
-                                    <segue destination="Ko8-P2-okF" kind="show" id="q5q-t3-7r4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtv-Sy-mrp">
-                                <rect key="frame" x="20" y="778" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="회원가입">
-                                    <color key="baseForegroundColor" red="0.52862591510000001" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2u-S1-xd8">
-                                <rect key="frame" x="20" y="585" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="username"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2qF-1c-58j">
+                                <rect key="frame" x="20" y="637" width="374" height="205"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2u-S1-xd8">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5k-H5-tXK">
+                                        <rect key="frame" x="0.0" y="59" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O25-Ev-wtz">
+                                        <rect key="frame" x="0.0" y="118" width="374" height="31"/>
+                                        <color key="tintColor" red="0.52862591510000001" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="로그인"/>
+                                        <connections>
+                                            <action selector="loginBtnTap:" destination="Mr1-3x-Ar4" eventType="touchUpInside" id="zMO-Yi-fDD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtv-Sy-mrp">
+                                        <rect key="frame" x="0.0" y="174" width="374" height="31"/>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="회원가입">
+                                            <color key="baseForegroundColor" red="0.52862591510000001" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X7i-Cs-6gP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2qF-1c-58j" firstAttribute="centerX" secondItem="olf-v0-HdQ" secondAttribute="centerX" id="FZx-JQ-hUD"/>
+                            <constraint firstItem="X7i-Cs-6gP" firstAttribute="bottom" secondItem="2qF-1c-58j" secondAttribute="bottom" constant="20" id="LoM-yr-80G"/>
+                            <constraint firstItem="X7i-Cs-6gP" firstAttribute="trailing" secondItem="2qF-1c-58j" secondAttribute="trailing" constant="20" id="P4W-eW-AqI"/>
+                            <constraint firstItem="2qF-1c-58j" firstAttribute="leading" secondItem="X7i-Cs-6gP" secondAttribute="leading" constant="20" id="oFE-do-aJs"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="idTextField" destination="d2u-S1-xd8" id="PIq-uO-qum"/>
