@@ -30,6 +30,7 @@
 		E2662C3D273CF9C000553BF6 /* DeleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2662C3C273CF9C000553BF6 /* DeleteTableViewController.swift */; };
 		E2662C41273E0D4700553BF6 /* SelectChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2662C40273E0D4700553BF6 /* SelectChatRoomTableViewController.swift */; };
 		E2662C45273E32FA00553BF6 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2662C44273E32FA00553BF6 /* ChatRoomViewController.swift */; };
+		E2775A25273EF5FA00E55457 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2775A24273EF5FA00E55457 /* ToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		E2662C3C273CF9C000553BF6 /* DeleteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableViewController.swift; sourceTree = "<group>"; };
 		E2662C40273E0D4700553BF6 /* SelectChatRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectChatRoomTableViewController.swift; sourceTree = "<group>"; };
 		E2662C44273E32FA00553BF6 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		E2775A24273EF5FA00E55457 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			children = (
 				E2662C40273E0D4700553BF6 /* SelectChatRoomTableViewController.swift */,
 				E2662C44273E32FA00553BF6 /* ChatRoomViewController.swift */,
+				E2775A24273EF5FA00E55457 /* ToDoViewController.swift */,
 			);
 			path = SecondTab;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				E2288D752721A699006079C4 /* MyProfileViewController.swift in Sources */,
 				1EEC3A4E271F215B0075EB5A /* ViewController.swift in Sources */,
 				1EEC3A4A271F215B0075EB5A /* AppDelegate.swift in Sources */,
+				E2775A25273EF5FA00E55457 /* ToDoViewController.swift in Sources */,
 				1E03DB5C27345A3F00513440 /* LoginViewController.swift in Sources */,
 				E2662C3B273CF9AB00553BF6 /* SearchTableViewController.swift in Sources */,
 				1EEC3A4C271F215B0075EB5A /* SceneDelegate.swift in Sources */,
