@@ -14,11 +14,27 @@ class ToDoViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var datePickerView: UIDatePicker!
+    @IBOutlet weak var dateSwitch: UISwitch!
+    @IBOutlet weak var selectedDateLabel: UILabel!
+    @IBOutlet weak var dateBtn: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        datePickerView.isHidden = true
+        datePickerView.addTarget(self, action: #selector(dateSelected), for: .valueChanged)
+        dateSwitch.isOn = false
+        dateBtn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+        
+        if isDateSwitchOn == false {
+            dateBtn.isEnabled = false
+        } else {
+            dateBtn.isEnabled = true
+        }
+        
         
         titleTextView.delegate = self
         bodyTextView.delegate = self
@@ -39,7 +55,31 @@ class ToDoViewController: UIViewController, UITextViewDelegate {
 
     }
     
+    var isDateSwitchOn:Bool = false
     @IBAction func datePickerSwitchOnOff(_ sender: UISwitch) {
+        isDateSwitchOn = !isDateSwitchOn
+        if isDateSwitchOn == true {
+            dateBtn.isEnabled = true
+            datePickerView.isHidden = false
+        } else {
+            if selectedDateLabel.text != "" {
+                dateBtn.isEnabled = true
+            }
+            selectedDateLabel.text = ""
+            dateBtn.isEnabled = false
+            datePickerView.isHidden = true
+        }
+    }
+    
+    var showCalender:Bool = false
+    @IBAction func dateBtnTapped(_ sender: Any) {
+        showCalender = !showCalender
+        if showCalender == true {
+            datePickerView.isHidden = false
+        } else {
+            datePickerView.isHidden = true
+        }
+
     }
     
     
@@ -47,7 +87,13 @@ class ToDoViewController: UIViewController, UITextViewDelegate {
     
     
     
-    
+    @objc
+    func dateSelected() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        let date = dateFormatter.string(from: datePickerView.date)
+        selectedDateLabel.text = date
+    }
     
     
     

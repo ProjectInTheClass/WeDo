@@ -191,35 +191,53 @@
                                     </textView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKF-5E-Z0x">
-                                <rect key="frame" x="20" y="360" width="374" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxC-gK-A7i">
+                                <rect key="frame" x="20" y="359" width="374" height="47"/>
                                 <color key="backgroundColor" red="0.98443096880000003" green="0.98003262280000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="5ME-Il-iI9"/>
-                                    <constraint firstAttribute="width" constant="374" id="Zql-5J-ipY"/>
+                                    <constraint firstAttribute="width" constant="374" id="bgy-MS-Sug"/>
+                                    <constraint firstAttribute="height" constant="47" id="y2l-rO-LIv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="날짜"/>
+                                <connections>
+                                    <action selector="dateBtnTapped:" destination="eW4-7g-GY0" eventType="touchUpInside" id="5rs-ZJ-ejM"/>
+                                </connections>
+                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kT5-P9-FaN">
                                 <rect key="frame" x="335" y="368" width="51" height="31"/>
                                 <connections>
                                     <action selector="datePickerSwitchOnOff:" destination="eW4-7g-GY0" eventType="valueChanged" id="dJN-Ix-OoR"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3U-BV-Mmz">
+                                <rect key="frame" x="325" y="373" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="8ap-nZ-SvD">
+                                <rect key="frame" x="20" y="406" width="374" height="351.5"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e7G-rn-Veu"/>
                         <color key="backgroundColor" red="0.91817468400000002" green="0.89631277320000002" blue="0.99216991659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="mxC-gK-A7i" firstAttribute="centerX" secondItem="6Fb-ea-RUV" secondAttribute="centerX" id="3eA-De-MpL"/>
                             <constraint firstItem="US1-kL-LnU" firstAttribute="centerX" secondItem="6Fb-ea-RUV" secondAttribute="centerX" id="5hL-zM-wTP"/>
                             <constraint firstItem="fmu-HI-vur" firstAttribute="leading" secondItem="e7G-rn-Veu" secondAttribute="leading" constant="25" id="8Hb-3Z-gxB"/>
                             <constraint firstItem="kT5-P9-FaN" firstAttribute="top" secondItem="US1-kL-LnU" secondAttribute="bottom" constant="29" id="Emd-4e-8dU"/>
+                            <constraint firstItem="mxC-gK-A7i" firstAttribute="top" secondItem="US1-kL-LnU" secondAttribute="bottom" constant="20" id="IFL-sG-87b"/>
                             <constraint firstItem="US1-kL-LnU" firstAttribute="top" secondItem="fmu-HI-vur" secondAttribute="bottom" constant="13" id="Tfm-Dy-QGp"/>
+                            <constraint firstItem="s3U-BV-Mmz" firstAttribute="top" secondItem="US1-kL-LnU" secondAttribute="bottom" constant="34" id="WrU-0i-8XC"/>
+                            <constraint firstItem="e7G-rn-Veu" firstAttribute="trailing" secondItem="8ap-nZ-SvD" secondAttribute="trailing" constant="20" id="eL4-zx-Y97"/>
                             <constraint firstItem="e7G-rn-Veu" firstAttribute="trailing" secondItem="kT5-P9-FaN" secondAttribute="trailing" constant="30" id="egG-DE-pNt"/>
                             <constraint firstItem="fmu-HI-vur" firstAttribute="top" secondItem="e7G-rn-Veu" secondAttribute="top" constant="24" id="fDT-af-vWZ"/>
-                            <constraint firstItem="sKF-5E-Z0x" firstAttribute="centerX" secondItem="6Fb-ea-RUV" secondAttribute="centerX" id="m7V-YS-rEh"/>
-                            <constraint firstItem="sKF-5E-Z0x" firstAttribute="top" secondItem="US1-kL-LnU" secondAttribute="bottom" constant="21" id="qX3-TD-sLr"/>
+                            <constraint firstItem="kT5-P9-FaN" firstAttribute="leading" secondItem="s3U-BV-Mmz" secondAttribute="trailing" constant="10" id="fEG-Dm-qOJ"/>
+                            <constraint firstItem="8ap-nZ-SvD" firstAttribute="top" secondItem="mxC-gK-A7i" secondAttribute="bottom" id="mZ3-Uf-N78"/>
+                            <constraint firstItem="8ap-nZ-SvD" firstAttribute="leading" secondItem="e7G-rn-Veu" secondAttribute="leading" constant="20" id="vjz-Pj-hP3"/>
+                            <constraint firstItem="mxC-gK-A7i" firstAttribute="top" secondItem="US1-kL-LnU" secondAttribute="bottom" constant="20" id="yqh-9P-2zk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Jp-aL-Xzl">
@@ -227,6 +245,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bodyTextView" destination="Njd-Lu-znD" id="vMM-Lh-LQw"/>
+                        <outlet property="dateBtn" destination="mxC-gK-A7i" id="9tL-yS-bDR"/>
+                        <outlet property="datePickerView" destination="8ap-nZ-SvD" id="m8k-7N-VcO"/>
+                        <outlet property="dateSwitch" destination="kT5-P9-FaN" id="VUP-Uk-d3f"/>
+                        <outlet property="selectedDateLabel" destination="s3U-BV-Mmz" id="gE4-Oq-8aG"/>
                         <outlet property="titleTextView" destination="ed8-Nk-FNb" id="YCQ-ZA-cWB"/>
                     </connections>
                 </viewController>
