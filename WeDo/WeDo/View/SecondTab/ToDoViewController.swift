@@ -14,10 +14,14 @@ class ToDoViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var timePickerView: UIDatePicker!
     @IBOutlet weak var datePickerView: UIDatePicker!
-    @IBOutlet weak var dateSwitch: UISwitch!
-    @IBOutlet weak var selectedDateLabel: UILabel!
     @IBOutlet weak var dateBtn: UIButton!
+    @IBOutlet weak var timeBtn: UIButton!
+    @IBOutlet weak var dateSwitch: UISwitch!
+    @IBOutlet weak var timeSwitch: UISwitch!
+    @IBOutlet weak var selectedDateLabel: UILabel!
+    @IBOutlet weak var selectedTimeLabel: UILabel!
     
     
     
@@ -29,10 +33,26 @@ class ToDoViewController: UIViewController, UITextViewDelegate {
         dateSwitch.isOn = false
         dateBtn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
         
+        
+        
+        timeSwitch.isOn = false
+        timeBtn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+        timePickerView.isHidden = true
+        timePickerView.addTarget(self, action: #selector(timeSelected), for: .valueChanged)
+        
+        
+        
+        
         if isDateSwitchOn == false {
             dateBtn.isEnabled = false
         } else {
             dateBtn.isEnabled = true
+        }
+        
+        if isTimeSwitchOn == false {
+            timeBtn.isEnabled = false
+        } else {
+            timeBtn.isEnabled = true
         }
         
         
@@ -61,6 +81,10 @@ class ToDoViewController: UIViewController, UITextViewDelegate {
         if isDateSwitchOn == true {
             dateBtn.isEnabled = true
             datePickerView.isHidden = false
+            
+            timeBtn.isHidden = true
+            timeSwitch.isHidden = true
+
         } else {
             if selectedDateLabel.text != "" {
                 dateBtn.isEnabled = true
@@ -68,16 +92,48 @@ class ToDoViewController: UIViewController, UITextViewDelegate {
             selectedDateLabel.text = ""
             dateBtn.isEnabled = false
             datePickerView.isHidden = true
+            
+            timeBtn.isHidden = false
+            timeSwitch.isHidden = false
         }
     }
+    
+    var isTimeSwitchOn:Bool = false
+    @IBAction func timePickerSwitchOnOff(_ sender: Any) {
+        isTimeSwitchOn = !isTimeSwitchOn
+        if isTimeSwitchOn == true {
+            timeBtn.isEnabled = true
+            timePickerView.isHidden = false
+        } else {
+            if selectedTimeLabel.text != "" {
+                timeBtn.isEnabled = true
+            }
+            selectedTimeLabel.text = ""
+            timeBtn.isEnabled = false
+            timePickerView.isHidden = true
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     var showCalender:Bool = false
     @IBAction func dateBtnTapped(_ sender: Any) {
         showCalender = !showCalender
         if showCalender == true {
             datePickerView.isHidden = false
+            
+            timeBtn.isHidden = true
+            timeSwitch.isHidden = true
         } else {
             datePickerView.isHidden = true
+            
+            timeBtn.isHidden = false
+            timeSwitch.isHidden = false
+
         }
 
     }
@@ -95,6 +151,13 @@ class ToDoViewController: UIViewController, UITextViewDelegate {
         selectedDateLabel.text = date
     }
     
+    @objc
+    func timeSelected() {
+        let timeFormatter = DateFormatter()
+        timeFormatter.timeStyle = .none
+        let time = timeFormatter.string(from: timePickerView.date)
+        selectedTimeLabel.text = time
+    }
     
     
     func textViewDidBeginEditing(_ textView: UITextView) {
