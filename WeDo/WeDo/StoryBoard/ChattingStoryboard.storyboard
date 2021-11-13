@@ -230,6 +230,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="시간"/>
+                                <connections>
+                                    <action selector="timeBtnTapped:" destination="eW4-7g-GY0" eventType="touchUpInside" id="kao-IO-nds"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uys-1N-H6u">
                                 <rect key="frame" x="333" y="416" width="51" height="31"/>
@@ -237,15 +240,15 @@
                                     <action selector="timePickerSwitchOnOff:" destination="eW4-7g-GY0" eventType="valueChanged" id="g8x-Fw-IKG"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOn-D9-JWb">
-                                <rect key="frame" x="299" y="416" width="0.0" height="0.0"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="wzU-n9-6oo">
+                                <rect key="frame" x="20" y="455" width="374" height="216"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOn-D9-JWb">
+                                <rect key="frame" x="325" y="421" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="wzU-n9-6oo">
-                                <rect key="frame" x="20" y="455" width="374" height="216"/>
-                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e7G-rn-Veu"/>
                         <color key="backgroundColor" red="0.91817468400000002" green="0.89631277320000002" blue="0.99216991659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -259,7 +262,7 @@
                             <constraint firstItem="uys-1N-H6u" firstAttribute="top" secondItem="mxC-gK-A7i" secondAttribute="bottom" constant="10" id="Lth-yF-ySK"/>
                             <constraint firstItem="US1-kL-LnU" firstAttribute="top" secondItem="fmu-HI-vur" secondAttribute="bottom" constant="13" id="Tfm-Dy-QGp"/>
                             <constraint firstItem="s3U-BV-Mmz" firstAttribute="top" secondItem="US1-kL-LnU" secondAttribute="bottom" constant="34" id="WrU-0i-8XC"/>
-                            <constraint firstItem="uys-1N-H6u" firstAttribute="leading" secondItem="bOn-D9-JWb" secondAttribute="trailing" constant="34" id="X3A-wj-Dhf"/>
+                            <constraint firstItem="uys-1N-H6u" firstAttribute="leading" secondItem="bOn-D9-JWb" secondAttribute="trailing" constant="8" id="X3A-wj-Dhf"/>
                             <constraint firstItem="wzU-n9-6oo" firstAttribute="top" secondItem="fbT-iq-IKL" secondAttribute="bottom" id="YsX-Ly-RQY"/>
                             <constraint firstItem="fbT-iq-IKL" firstAttribute="centerX" secondItem="6Fb-ea-RUV" secondAttribute="centerX" id="bUM-Yj-yTt"/>
                             <constraint firstAttribute="trailing" secondItem="wzU-n9-6oo" secondAttribute="trailing" constant="20" id="c7Z-44-1xO"/>
@@ -268,7 +271,7 @@
                             <constraint firstItem="e7G-rn-Veu" firstAttribute="trailing" secondItem="kT5-P9-FaN" secondAttribute="trailing" constant="30" id="egG-DE-pNt"/>
                             <constraint firstItem="fmu-HI-vur" firstAttribute="top" secondItem="e7G-rn-Veu" secondAttribute="top" constant="24" id="fDT-af-vWZ"/>
                             <constraint firstItem="kT5-P9-FaN" firstAttribute="leading" secondItem="s3U-BV-Mmz" secondAttribute="trailing" constant="10" id="fEG-Dm-qOJ"/>
-                            <constraint firstItem="bOn-D9-JWb" firstAttribute="top" secondItem="mxC-gK-A7i" secondAttribute="bottom" constant="10" id="lhx-D8-6n0"/>
+                            <constraint firstItem="bOn-D9-JWb" firstAttribute="top" secondItem="mxC-gK-A7i" secondAttribute="bottom" constant="15" id="lhx-D8-6n0"/>
                             <constraint firstItem="8ap-nZ-SvD" firstAttribute="top" secondItem="mxC-gK-A7i" secondAttribute="bottom" id="mZ3-Uf-N78"/>
                             <constraint firstItem="8ap-nZ-SvD" firstAttribute="leading" secondItem="e7G-rn-Veu" secondAttribute="leading" constant="20" id="vjz-Pj-hP3"/>
                             <constraint firstItem="e7G-rn-Veu" firstAttribute="trailing" secondItem="uys-1N-H6u" secondAttribute="trailing" constant="32" id="w9o-kv-Dnx"/>

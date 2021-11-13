@@ -128,14 +128,30 @@ class ToDoViewController: UIViewController, UITextViewDelegate {
             
             timeBtn.isHidden = true
             timeSwitch.isHidden = true
+            selectedTimeLabel.isHidden = true
         } else {
             datePickerView.isHidden = true
             
             timeBtn.isHidden = false
             timeSwitch.isHidden = false
+            selectedTimeLabel.isHidden = false
+
 
         }
 
+    }
+    
+    var showTimePicker:Bool = false
+    @IBAction func timeBtnTapped(_ sender: Any) {
+        showTimePicker = !showTimePicker
+        if showTimePicker == true {
+            timePickerView.isHidden = false
+            timeSwitch.isHidden = false
+
+        } else {
+            timePickerView.isHidden = true
+
+        }
     }
     
     
@@ -153,9 +169,9 @@ class ToDoViewController: UIViewController, UITextViewDelegate {
     
     @objc
     func timeSelected() {
-        let timeFormatter = DateFormatter()
-        timeFormatter.timeStyle = .none
-        let time = timeFormatter.string(from: timePickerView.date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .medium
+        let time = dateFormatter.string(from: timePickerView.date)
         selectedTimeLabel.text = time
     }
     

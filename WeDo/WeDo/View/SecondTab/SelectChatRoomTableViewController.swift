@@ -34,7 +34,7 @@ class SelectChatRoomTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "채팅방 1"
+        cell.textLabel?.text = "김춘삼"
         return cell
     }
     
